@@ -1,0 +1,46 @@
+
+.main-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.table{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DDEBFF;
+    height: 360px;
+    width:80%;
+    border-radius: 10px;
+}
+.newbutton{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 54%;
+}
+.btn1{
+    margin-left: 2px;
+}
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+}
+.exmain{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: #DDEBFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inp{
+    margin-right: 5px;
+}

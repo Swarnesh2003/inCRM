@@ -42,8 +42,13 @@ export default function Customerlist(){
         setCustomers(customer.filter(custo => custo.customer_id !==id))
     })    }
     return (
-        <>
+
+        <div className="main-table">
+            <div className="table">
         <h1>Customer List</h1>
+        <div className="newbutton">
+        <button onClick={()=>setForm(true)} className='btn btn-primary'>Add New Customer</button>
+        </div>
         <table border={"2px"} cellPadding={"10px"}>
             <thead>
                 <tr>
@@ -61,14 +66,16 @@ export default function Customerlist(){
                     <td>{cus.last_name}</td>
                     <td>{cus.email}</td>
                     <td>{cus.contact}</td>
-                    <td><button onClick={() =>handleEditBtn(cus)}>Edit</button> <button onClick = {() =>handleDelete(cus.customer_id)}>Delete</button></td>
+                    <td><button className="btn btn-warning" onClick={() =>handleEditBtn(cus)}>Edit</button> <button className="btn btn-danger" onClick = {() =>handleDelete(cus.customer_id)}>Delete</button></td>
                 </tr>
                 })}
             </tbody>
         </table>
-        <button onClick={()=>setForm(true)}>Add New Customer</button>
+        </div>
+        
         {addCustomerForm && <Addcustomer handleNewCustomer={handleNewCustomer}/>}
         {editCustomerForm && <EditCustomer handleEditCustomer={handleEditCustomer} selectedData={selectedData}/>}
-        </>
+        </div>
+        
     )
 }
