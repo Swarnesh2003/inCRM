@@ -1,9 +1,10 @@
 import React, { useEffect , useState} from 'react'
-import { getCustomer } from '../services/ApiService'
-
+import { getCustomer , addCustomer} from '../services/ApiService'
+import Addcustomer from "./Addcustomer"
 export default function Customerlist(){
 
     const [customer, setCustomers] = useState([])
+    const [addCustomerForm, setForm] = useState(false)
     useEffect(()=>{
         let mount= true
         getCustomer()
@@ -13,6 +14,11 @@ export default function Customerlist(){
             return() => mount = false
         })
     },[])
+
+    const handleNewCustomer = (e) =>{
+        addCustomer(e.target)
+        .then(res => setCustomers(res))
+    }
     return (
         <>
         <h1>Customer List</h1>
@@ -38,7 +44,8 @@ export default function Customerlist(){
                 })}
             </tbody>
         </table>
-        <button>Add New Customer</button>
+        <button onClick={()=>setForm(true)}>Add New Customer</button>
+        {addCustomerForm && <Addcustomer handleNewCustomer={handleNewCustomer}/>}
         </>
     )
 }
