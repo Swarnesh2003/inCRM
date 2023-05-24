@@ -35,7 +35,6 @@ export function editCustomer(id, customer){
         return resp.data
     }).catch(function(error){
         window.alert("Please provide a different emailId/ Contact Number")
-        console.log(error)
         return error})
 }
 

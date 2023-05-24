@@ -12,7 +12,6 @@ export default function Customerlist(){
         let mount= true
         getCustomer()
         .then(res => {
-            console.log(res)
             setCustomers(res)
             return() => mount = false
         })
