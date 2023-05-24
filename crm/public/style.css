@@ -12,8 +12,9 @@
     align-items: center;
     justify-content: center;
     background-color: #DDEBFF;
-    height: 360px;
+    height: 100%;
     width:80%;
+    padding-bottom: 20px;
     border-radius: 10px;
 }
 .newbutton{

@@ -20,7 +20,8 @@ export default function Customerlist(){
 
     const handleNewCustomer = (e) =>{
         addCustomer(e.target)
-        .then(res => setCustomers(res))
+        .then(res => {
+            setCustomers(res)})
     }
 
     const handleEditBtn = (cus) =>{
@@ -39,6 +40,10 @@ export default function Customerlist(){
     const handleDelete =(id) =>{
         deleteCustomer(id)
     .then(res =>{
+        swal({
+            text: "Customer deleted successfully!!",
+            icon: "success",
+          });
         setCustomers(customer.filter(custo => custo.customer_id !==id))
     })    }
     return (
