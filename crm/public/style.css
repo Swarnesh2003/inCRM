@@ -90,3 +90,25 @@
     margin-top:2vh;
     width: 100%;
 }
+
+/*------------------------------Dashboard----------------------------*/
+
+.dashboard{
+    display : flex;
+    flex-direction: row;
+}
+.dashboard-links{
+    width: 30vh;
+    height: 100vh;
+    position: fixed;
+    background-color: #DDEBFF;
+}
+.dashboard-outlets{
+    margin-left: 37vh;
+}
+.dashboard-outlet-header{
+    margin-left: 5vh;
+}
+.dashboard-outlet-main{
+    margin-left: 5vh;
+}
