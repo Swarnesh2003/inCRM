@@ -45,3 +45,48 @@
 .inp{
     margin-right: 5px;
 }
+
+/*home page*/
+.home .navbar{
+    background-color:transparent;
+}
+.home{
+    background-image: url('./image/homebg.jpg');
+    
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.home-main .intro-page{
+    width: 50%;
+}
+.home-main .login{
+    margin-top: 17vh;
+    background-color:#ffffffe2;
+    height: 50vh;
+    width: 60vh;
+    display: flex;
+    
+    flex-direction: column;
+
+    align-items: center;
+    border-radius: 10px;
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+.home-main .login form{
+    width: 80%;
+    display: flex;
+    margin-top: 4vh;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-main .login .login-submit{
+    margin-top:2vh;
+    width: 100%;
+}
