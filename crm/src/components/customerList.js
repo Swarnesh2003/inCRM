@@ -1,5 +1,5 @@
 import React, { useEffect , useState} from 'react'
-import { getCustomer , addCustomer, editCustomer, deleteCustomer} from '../services/ApiService'
+import { getCustomer , addCustomer,  editCustomer, deleteCustomer} from '../services/ApiService'
 import Addcustomer from "./Addcustomer"
 import EditCustomer from './Editcustomer'
 export default function Customerlist(){

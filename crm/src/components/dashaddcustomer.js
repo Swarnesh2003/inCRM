@@ -2,11 +2,24 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-
+import {addCustomerDetails} from '../services/ApiService'
 function Dashaddcustomer() {
- function handleNewCustomer(){
-    
- }
+  useEffect(()=>{
+    let mount= true
+    getCustomer()
+    .then(res => {
+        setCustomers(res)
+        return() => mount = false
+    })
+},[])
+ const handleNewCustomer = (e) =>{
+  addCustomerDetails(e.target).then(
+    res => {
+      window.alert('Successfully Inserted')
+    }
+  )
+  }
+
   return (
     <Form onSubmit={handleNewCustomer}>
         <h3>Add Customer</h3>
