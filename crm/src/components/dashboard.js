@@ -9,7 +9,7 @@ export default function Dashboard(){
             <img src=".\image\logo-bg.png" alt="Logo"  className="d-inline-block align-text-top" />
           </a>
           <div class="toolbar">
-            <h2>Welcome Back!</h2>
+            <h2>Dashboard</h2>
             <a href="#" class="logout">
               Log Out
             </a>
@@ -20,6 +20,9 @@ export default function Dashboard(){
           <div class="menu">
             <div class="menu__item">
               <a class="menu__link" href="#"><Link to="/dashboard/addCustomer">Add Customer</Link></a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="#"><Link to="/dashboard/addCustomer">View Customer</Link></a>
             </div>
             <div class="menu__item">
               <a class="menu__link" href="#"><Link to="/dashboard/addCustomer">Campaign</Link></a>
